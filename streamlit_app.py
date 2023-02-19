@@ -25,8 +25,10 @@ st.dataframe(fruits_to_show)
 
 
 st.header("Fruityvice Fruit Advice!")
-import requests
+fruit_choice = st.text_input('What fruit would you like information about?','Kiwi')
+st.write('The user entered ', fruit_choice)
 
+import requests
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 st.text(fruityvice_response)
